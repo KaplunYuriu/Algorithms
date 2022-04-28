@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AlgorithmsVisualize": {
+      "commandName": "Project",
+      "commandLineArgs": "100000"
+    }
+  }
+}

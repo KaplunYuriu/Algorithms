@@ -5,11 +5,9 @@ namespace AlgorithmsVisualize
 {
     static class SortingAlgorithmVisualizer
     {
-        public static void Visualize()
+        public static void Visualize(int elementsNumber)
         {
-            const int ElementsNumber = 100_000;
-
-            Console.WriteLine($"Elements in array: {ElementsNumber}");
+            Console.WriteLine($"Elements in array: {elementsNumber}");
 
             foreach(SortAlgorithmType sortingType in Enum.GetValues(typeof(SortAlgorithmType))) {
                 Console.WriteLine($"Selected algorithm: {sortingType}");
@@ -19,7 +17,7 @@ namespace AlgorithmsVisualize
                 var stopwatch = Stopwatch.StartNew();
 
                 var sortedArray = algorithm.Sort(
-                    PrepareArray(ElementsNumber)
+                    PrepareArray(elementsNumber)
                 );
 
                 stopwatch.Stop();

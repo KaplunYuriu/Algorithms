@@ -1,3 +1,5 @@
 ﻿using AlgorithmsVisualize;
 
-SortingAlgorithmVisualizer.Visualize();
+int elementsNumber = Convert.ToInt32(Environment.GetCommandLineArgs()[1]);
+
+SortingAlgorithmVisualizer.Visualize(elementsNumber);
