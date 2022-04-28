@@ -9,7 +9,8 @@ namespace Arrays
             switch (type)
             {
                 case SortAlgorithmType.Default: return new Default();
-                case SortAlgorithmType.MergeSort: return new MergeSort();
+                case SortAlgorithmType.Bubble: return new Bubble();
+                case SortAlgorithmType.MergeSort: return new Merge();
                 default: throw new ArgumentException(nameof(type));
             }
         }

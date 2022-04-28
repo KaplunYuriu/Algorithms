@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "src\Arrays\Arrays.csproj", "{966E4212-EE55-4972-AF84-8F912B8356A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsVisualize", "src\AlgorithmsVisualize\AlgorithmsVisualize.csproj", "{811D8EC9-9EB0-4C5C-A59D-76D200AC63A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsVisualize", "src\AlgorithmsVisualize\AlgorithmsVisualize.csproj", "{811D8EC9-9EB0-4C5C-A59D-76D200AC63A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayTests", "tests\ArrayTests\ArrayTests.csproj", "{022C3AFD-EEEC-453B-A06C-CDCC76373191}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{811D8EC9-9EB0-4C5C-A59D-76D200AC63A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{811D8EC9-9EB0-4C5C-A59D-76D200AC63A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{811D8EC9-9EB0-4C5C-A59D-76D200AC63A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022C3AFD-EEEC-453B-A06C-CDCC76373191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022C3AFD-EEEC-453B-A06C-CDCC76373191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022C3AFD-EEEC-453B-A06C-CDCC76373191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022C3AFD-EEEC-453B-A06C-CDCC76373191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

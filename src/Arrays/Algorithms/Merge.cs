@@ -1,6 +1,6 @@
 ﻿namespace Arrays.Algorithms
 {
-    internal class MergeSort : ISortingAlgorithm
+    internal class Merge : ISortingAlgorithm
     {
         public int[] Sort(int[] unsortedArray)
         {
@@ -12,12 +12,12 @@
             int[] firstHalf = unsortedArray[0..divizion];
             int[] secondHalf = unsortedArray[divizion..unsortedArray.Length];
 
-            var mergedResult = Merge(Sort(firstHalf), Sort(secondHalf));
+            var mergedResult = MergeArrays(Sort(firstHalf), Sort(secondHalf));
 
             return mergedResult.ToArray();
         }
 
-        private int[] Merge(int[] first, int[] second)
+        private int[] MergeArrays(int[] first, int[] second)
         {
             int firstIndex = 0;
             int secondIndex = 0;

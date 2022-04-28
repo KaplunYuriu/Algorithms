@@ -7,9 +7,8 @@ namespace AlgorithmsVisualize
     {
         public static void Visualize()
         {
-            const int ElementsNumber = 100_000_000;
+            const int ElementsNumber = 100_000;
 
-            var array = PrepareArray(ElementsNumber);
             Console.WriteLine($"Elements in array: {ElementsNumber}");
 
             foreach(SortAlgorithmType sortingType in Enum.GetValues(typeof(SortAlgorithmType))) {
@@ -19,7 +18,9 @@ namespace AlgorithmsVisualize
 
                 var stopwatch = Stopwatch.StartNew();
 
-                var sortedArray = algorithm.Sort(array);
+                var sortedArray = algorithm.Sort(
+                    PrepareArray(ElementsNumber)
+                );
 
                 stopwatch.Stop();
 
