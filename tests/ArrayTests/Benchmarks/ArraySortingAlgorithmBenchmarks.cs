@@ -1,26 +1,14 @@
-﻿using ArrayTests.Benchmarks.Implementations;
-using BenchmarkDotNet.Running;
-using System.Collections.Generic;
+﻿using BenchmarkDotNet.Running;
 using Xunit;
 
 namespace ArrayTests.Benchmarks
 {
-
     public class ArraySortingAlgorithmBenchmarks
     {
-        [Theory]
-        [MemberData(nameof(Benchmarks))]
-        public void Benchmark(ISortingAlgorithmBenchmark benchmark)
+        [Fact]
+        public void Benchmark()
         {
-            BenchmarkRunner.Run(benchmark.GetType());
+            BenchmarkRunner.Run<SortingAlgorithmsContainer>();
         }
-
-        public static IEnumerable<object[]> Benchmarks => new List<object[]>
-        {
-            new object[] { new InsertBenchmark() },
-            new object[] { new MergeBenchmark() },
-            new object[] { new BubbleBenchmark() },
-            new object[] { new DefaultBenchmark() },
-        };
     }
 }
