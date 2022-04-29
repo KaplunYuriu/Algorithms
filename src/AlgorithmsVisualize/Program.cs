@@ -1,5 +1,10 @@
 ﻿using AlgorithmsVisualize;
+using Arrays;
+using Cocona;
 
-int elementsNumber = Convert.ToInt32(Environment.GetCommandLineArgs()[1]);
+CoconaApp.Run((string alg, int el) =>
+{
+    SortAlgorithmType sortAlgorithm = Enum.Parse<SortAlgorithmType>(alg);
 
-SortingAlgorithmVisualizer.Visualize(elementsNumber);
+    SortingAlgorithmVisualizer.Visualize(sortAlgorithm, el);
+});

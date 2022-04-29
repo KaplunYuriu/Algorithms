@@ -1,10 +1,14 @@
 ﻿namespace Arrays
 {
+    [Flags]
     public enum SortAlgorithmType
     {
-        Default,
-        Bubble,
-        MergeSort,
-        Insert
+        Default = 1,
+        Bubble = 2,
+        Merge = 4,
+        Insert = 8,
+
+
+        All = Default | Bubble | Merge | Insert,
     }
 }

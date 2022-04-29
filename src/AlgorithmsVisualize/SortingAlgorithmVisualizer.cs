@@ -1,15 +1,16 @@
 ﻿using Arrays;
+using Infrastructure;
 using System.Diagnostics;
 
 namespace AlgorithmsVisualize
 {
     static class SortingAlgorithmVisualizer
     {
-        public static void Visualize(int elementsNumber)
+        public static void Visualize(SortAlgorithmType type, int elementsNumber)
         {
             Console.WriteLine($"Elements in array: {elementsNumber}");
 
-            foreach(SortAlgorithmType sortingType in Enum.GetValues(typeof(SortAlgorithmType))) {
+            foreach(SortAlgorithmType sortingType in type.GetFlags()) {
                 Console.WriteLine($"Selected algorithm: {sortingType}");
 
                 var algorithm = SortingAlgorithmFactory.GetAlgorithm(sortingType);

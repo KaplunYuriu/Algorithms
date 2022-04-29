@@ -2,7 +2,7 @@
   "profiles": {
     "AlgorithmsVisualize": {
       "commandName": "Project",
-      "commandLineArgs": "100000"
+      "commandLineArgs": "--alg All --el 10000"
     }
   }
 }
