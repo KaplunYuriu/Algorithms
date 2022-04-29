@@ -2,19 +2,19 @@
 {
     internal class Merge : ISortingAlgorithm
     {
-        public int[] Sort(int[] unsortedArray)
+        public int[] Sort(int[] unsortedArray) => SortImplementation(new Span<int>(unsortedArray));
+
+        private int[] SortImplementation(Span<int> array)
         {
-            if (unsortedArray.Length <= 1)
-                return unsortedArray;
+            if (array.Length <= 1)
+                return array.ToArray();
 
-            int divizion = unsortedArray.Length / 2;
+            int divizion = array.Length / 2;
 
-            int[] firstHalf = unsortedArray[0..divizion];
-            int[] secondHalf = unsortedArray[divizion..unsortedArray.Length];
+            var firstHalf = array[..divizion];
+            var secondHalf = array[divizion..];
 
-            var mergedResult = MergeArrays(Sort(firstHalf), Sort(secondHalf));
-
-            return mergedResult.ToArray();
+            return MergeArrays(SortImplementation(firstHalf), SortImplementation(secondHalf));
         }
 
         private int[] MergeArrays(int[] first, int[] second)
