@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "src\Arrays\Arrays
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsVisualize", "src\AlgorithmsVisualize\AlgorithmsVisualize.csproj", "{811D8EC9-9EB0-4C5C-A59D-76D200AC63A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayTests", "tests\ArrayTests\ArrayTests.csproj", "{022C3AFD-EEEC-453B-A06C-CDCC76373191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayTests", "tests\ArrayTests\ArrayTests.csproj", "{022C3AFD-EEEC-453B-A06C-CDCC76373191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{577DB493-0ECF-4243-83C3-10C8DDDA3428}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{022C3AFD-EEEC-453B-A06C-CDCC76373191} = {577DB493-0ECF-4243-83C3-10C8DDDA3428}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2455C4-10C0-4073-BB0C-26217B985CCE}
