@@ -11,6 +11,7 @@ namespace Arrays
                 case SortAlgorithmType.Default: return new Default();
                 case SortAlgorithmType.Bubble: return new Bubble();
                 case SortAlgorithmType.MergeSort: return new Merge();
+                case SortAlgorithmType.Insert: return new Insert();
                 default: throw new ArgumentException(nameof(type));
             }
         }

@@ -4,6 +4,7 @@
     {
         Default,
         Bubble,
-        MergeSort
+        MergeSort,
+        Insert
     }
 }
