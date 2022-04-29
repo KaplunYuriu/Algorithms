@@ -1,5 +1,5 @@
 using Arrays.Algorithms;
-using System;
+using Infrastructure;
 using System.Collections.Generic;
 using Xunit;
 
@@ -13,7 +13,7 @@ namespace ArrayTests
         [MemberData(nameof(SortingAlgorithms))]
         public void Sort_CorrectOrder(ISortingAlgorithm algorithm)
         {
-            var array = PrepareArray();
+            var array = ArrayGenerator.GenerateRandomArray(ElementsNumber);
 
             var sortedArray = algorithm.Sort(array);
 
@@ -29,18 +29,5 @@ namespace ArrayTests
             new object[] { new Merge() },
             new object[] { new Bubble() },
         };
-
-        private int[] PrepareArray()
-        {
-            var array = new int[ElementsNumber];
-            var random = new Random();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = random.Next(5_000);
-            }
-
-            return array;
-        }
     }
 }
