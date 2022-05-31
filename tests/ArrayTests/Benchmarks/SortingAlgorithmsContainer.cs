@@ -9,13 +9,13 @@ namespace ArrayTests.Benchmarks
     [SimpleJob(RunStrategy.ColdStart, launchCount: 1)]
     public class SortingAlgorithmsContainer
     {
-        private const int ElementsNumber = 1_000_000_000;
+        private const int ElementsNumber = 100_000;
 
-        [Benchmark]
+        /*[Benchmark]
         public void Bubble()
         {
             new Bubble().Sort(ArrayGenerator.GenerateRandomArray(ElementsNumber));
-        }
+        }*/
 
         [Benchmark]
         public void Insert()
@@ -29,6 +29,7 @@ namespace ArrayTests.Benchmarks
             new Merge().Sort(ArrayGenerator.GenerateRandomArray(ElementsNumber));
         }
 
+        [Benchmark]
         public void Heap()
         {
             new Heap().Sort(ArrayGenerator.GenerateRandomArray(ElementsNumber));
