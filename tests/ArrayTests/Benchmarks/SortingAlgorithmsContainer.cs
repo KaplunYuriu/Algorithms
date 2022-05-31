@@ -29,6 +29,11 @@ namespace ArrayTests.Benchmarks
             new Merge().Sort(ArrayGenerator.GenerateRandomArray(ElementsNumber));
         }
 
+        public void Heap()
+        {
+            new Heap().Sort(ArrayGenerator.GenerateRandomArray(ElementsNumber));
+        }
+
         [Benchmark]
         public void Default()
         {

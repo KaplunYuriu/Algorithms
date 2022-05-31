@@ -9,7 +9,7 @@
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next(5_000);
+                array[i] = random.Next(-5_000, 5_000);
             }
 
             return array;

@@ -7,8 +7,9 @@
         Bubble = 2,
         Merge = 4,
         Insert = 8,
+        Heap = 16,
 
 
-        All = Default | Bubble | Merge | Insert,
+        All = Default | Bubble | Merge | Insert | Heap,
     }
 }

@@ -28,6 +28,7 @@ namespace ArrayTests
             new object[] { new Insert() },
             new object[] { new Merge() },
             new object[] { new Bubble() },
+            new object[] { new Heap() }
         };
     }
 }
